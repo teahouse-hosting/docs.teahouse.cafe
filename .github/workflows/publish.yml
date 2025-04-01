@@ -22,7 +22,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - uses: ammaraskar/sphinx-action@master
+      - uses: ammaraskar/sphinx-action@8.2.3
         with:
           pre-build-command: apt-get update -y && apt-get install -y python3-poetry && poetry install
           build-command: poetry run sphinx-build -M html src build
