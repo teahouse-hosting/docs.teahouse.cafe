@@ -6,6 +6,10 @@ packages = [{include = "docs"}]
 python = ">=3.12"
 sphinx = "^8.2.3"
 furo = "^2024.8.6"
+sphinxext-opengraph = "^0.9.1"
+sphinx-inline-tabs = "^2023.4.21"
+myst-parser = "^4.0.1"
+sphinx-copybutton = "^0.5.2"
 
 [tool.poetry.group.dev.dependencies]
 sphinx-autobuild = "^2024.10.3"

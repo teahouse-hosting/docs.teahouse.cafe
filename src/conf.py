@@ -13,7 +13,12 @@ author = 'Teahouse Hosting'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []
+extensions = [
+    "myst_parser",
+    "sphinxext.opengraph",
+    "sphinx_inline_tabs",
+    "sphinx_copybutton",
+]
 
 templates_path = ['_templates']
 exclude_patterns = []
@@ -31,7 +36,7 @@ html_logo = "_static/logo.svg"
 html_theme_options = {
     "light_css_variables": {
         "color-brand-primary": "oklch(39.95% 0.1021 342.07)",
-        "color-brand-content": "#CC3333",
+        # "color-brand-content": "#CC3333",
     },
 }
 
