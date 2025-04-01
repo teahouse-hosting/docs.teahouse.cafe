@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v4
       - uses: ammaraskar/sphinx-action@8.2.3
         with:
-          pre-build-command: pip install poetry && poetry install
+          pre-build-command: pip install poetry && poetry install --only-root
           build-command: poetry run sphinx-build -M html src build
           docs-folder: "."
       - uses: actions/upload-artifact@v4
