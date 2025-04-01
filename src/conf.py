@@ -25,3 +25,18 @@ exclude_patterns = []
 
 html_theme = 'furo'
 html_static_path = ['_static']
+
+html_logo = "_static/logo.svg"
+
+html_theme_options = {
+    "light_css_variables": {
+        "color-brand-primary": "oklch(39.95% 0.1021 342.07)",
+        "color-brand-content": "#CC3333",
+    },
+}
+
+html_theme_options = {
+    "source_repository": "https://github.com/teahouse-hosting/docs.teahouse.cafe",
+    "source_branch": "trunk",
+    "source_directory": "src/",
+}
