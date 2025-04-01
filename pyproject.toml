@@ -1,0 +1,15 @@
+[tool.poetry]
+package-mode = false
+packages = [{include = "docs"}]
+
+[tool.poetry.dependencies]
+python = ">=3.12"
+sphinx = "^8.2.3"
+furo = "^2024.8.6"
+
+[tool.poetry.group.dev.dependencies]
+sphinx-autobuild = "^2024.10.3"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
