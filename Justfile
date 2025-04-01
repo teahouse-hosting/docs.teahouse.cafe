@@ -17,7 +17,7 @@ sphinx-help:
 
 # Set up dev environments
 install:
-  poetry install
+  poetry install --all-groups
   pre-commit install
 
 
