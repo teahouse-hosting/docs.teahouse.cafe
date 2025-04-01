@@ -51,6 +51,6 @@ jobs:
           domain: docs.teahouse.cafe
       - id: install-aws-cli
         uses: unfor19/install-aws-cli-action@v1
-      - working-directory: ./build
+      - working-directory: ./build/html
         run: |
           aws s3 sync --delete . s3://${{steps.settings.outputs.bucket}}
