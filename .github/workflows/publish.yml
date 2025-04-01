@@ -24,8 +24,8 @@ jobs:
         uses: actions/checkout@v4
       - uses: ammaraskar/sphinx-action@master
         with:
-          pre-build-command: apt-get update -y && apt-get install -y just python3-poetry
-          build-command: just install build html
+          pre-build-command: apt-get update -y && apt-get install -y python3-poetry && poetry install
+          build-command: poetry run sphinx-build -M html src build
           docs-folder: "."
       - uses: actions/upload-artifact@v4
         with:
