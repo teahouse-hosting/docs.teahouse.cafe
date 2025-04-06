@@ -35,7 +35,7 @@ jobs:
     if: github.repository == 'teahouse-hosting/docs.teahouse.cafe' && github.ref == 'refs/heads/trunk'
     environment:
       name: teahouse
-      url: https://${{ steps.settings.outputs.bucket }}
+      url: https://docs.teahouse.cafe
     runs-on: ubuntu-latest
     needs: build
     steps:
@@ -43,13 +43,8 @@ jobs:
         with:
           name: website
           path: ./build
-      - name: Configure S3
-        uses: teahouse-hosting/configure-s3@trunk
-        id: settings
+      - name: Upload
+        uses: teahouse-hosting/upload@trunk
         with:
           domain: docs.teahouse.cafe
-      - id: install-aws-cli
-        uses: unfor19/install-aws-cli-action@v1
-      - working-directory: ./build/html
-        run: |
-          aws s3 sync --delete . s3://${{steps.settings.outputs.bucket}}
+          root: ./build/html
