@@ -1,3 +1,4 @@
+(with-git)=
 # I Have a Git Repo
 
 If you're using Git and a static site generator (or want to use them), Teahouse supports uploading directly from CI/CD.
