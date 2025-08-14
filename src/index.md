@@ -7,5 +7,6 @@
 :titlesonly:
 
 intro/index
+guides/index
 ref/index
 ```
