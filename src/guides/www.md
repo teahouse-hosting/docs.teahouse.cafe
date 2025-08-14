@@ -1,6 +1,6 @@
 # WWW Handling
 
-It used to be common for websites to start with `www` (eg `www.google.com`). But as time went on, we collectively dropped it (eg `reddit.com`). But its legacy lives on in user habbits and browser algorithms.
+It used to be common for websites to start with `www` (eg `www.google.com`). But as time went on, we collectively dropped it (eg `reddit.com`). But its legacy lives on in user habits and browser algorithms.
 
 Teahouse handles this intelligently. You create your sites with your preferred form (with or without `www`), and Teahouse will automatically redirect.
 
