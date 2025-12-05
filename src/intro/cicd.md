@@ -30,6 +30,9 @@ on:
     branches:
       - trunk
 
+env:
+  DOMAIN: example.teahouse.page
+
 permissions:
   id-token: write # This is required for requesting the JWT
   contents: read  # This is required for actions/checkout
@@ -42,7 +45,7 @@ jobs:
   publish:
     environment:
       name: teahouse
-      url: https://example.teahouse.page
+      url: "https://${{ env.DOMAIN }}"
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
@@ -50,7 +53,7 @@ jobs:
     - name: Upload
       uses: teahouse-hosting/upload@trunk
       with:
-        domain: example.teahouse.page
+        domain: ${{ env.DOMAIN }}
         root: .
 
 ```
