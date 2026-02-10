@@ -28,6 +28,8 @@ Inputs:
 
 This will delete old files and update everything.
 
+By default, anything starting with ``.git`` is excluded.
+
 
 (ref-gha-configure-s3)=
 ## `teahouse-hosting/configure-s3`
