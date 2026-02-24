@@ -10,6 +10,7 @@ When serving a website, Teahouse will check for several options:
 * The path with `index.html`
 * The path with `index.txt`
 
+(error-pages)=
 ## Error pages
 
 In case that no page can be found, Teahouse will look for a `_404.html` page in your site and serve that as the error page.
