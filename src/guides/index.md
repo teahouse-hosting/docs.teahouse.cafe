@@ -7,4 +7,5 @@ These pages discuss various features in more depth.
 
 special-files
 www
+objects
 ```
