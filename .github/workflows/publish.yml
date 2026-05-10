@@ -44,7 +44,7 @@ jobs:
           name: website
           path: ./build
       - name: Upload
-        uses: teahouse-hosting/upload@trunk
+        uses: teahouse-hosting/swiss-army-upload@trunk
         with:
-          domain: docs.teahouse.cafe
           root: ./build/html
+          dest: tea://docs.teahouse.cafe/
