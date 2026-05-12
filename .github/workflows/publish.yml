@@ -43,6 +43,7 @@ jobs:
         with:
           name: website
           path: ./build
+      - run: du -h
       - name: Upload
         uses: teahouse-hosting/swiss-army-upload@trunk
         with:
