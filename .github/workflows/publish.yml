@@ -47,5 +47,5 @@ jobs:
       - name: Upload
         uses: teahouse-hosting/swiss-army-upload@trunk
         with:
-          root: ./build/html
+          src: ./build/html
           dest: tea://docs.teahouse.cafe/
