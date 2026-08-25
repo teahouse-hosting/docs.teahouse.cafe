@@ -58,7 +58,8 @@ Forgejo (including actions) is under active development, and best practices may 
 
 :::{seealso}
 
-* [SAU and Teahouse](inv:sau#backend-teahouse)
+* [Swiss Army Upload: Teahouse Hosting](inv:sau#backend-teahouse)
+* [Swiss Army Upload: Using in Actions](inv:sau#guides/actions)
 
 :::
 

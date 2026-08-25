@@ -74,6 +74,7 @@ Compared to the above, the upload step becomes:
 
 :::{seealso}
 
-* [SAU and Teahouse](inv:sau#backend-teahouse)
+* [Swiss Army Upload: Teahouse Hosting](inv:sau#backend-teahouse)
+* [Swiss Army Upload: Using in Actions](inv:sau#guides/actions)
 
 :::
