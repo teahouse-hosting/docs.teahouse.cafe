@@ -1,5 +1,5 @@
 (with-git)=
-# I Have a Git Repo
+# ... GitHub
 
 If you're using Git and a static site generator (or want to use them), Teahouse supports uploading directly from CI/CD.
 
@@ -10,15 +10,17 @@ Currently, we support these CI/CD providers:
 
 ## 1. Create & configure your site
 
-1. {ref}`Create your site <create-site>`
+1. [Create your site](#create-site)
 2. Configure your repo on the site page, set it to `github.com/YOURNAME/YOURPROJECT` (making the appropriate substitions)
 
 
 ## 2. Add Teahouse to your pipeline
 
-:::{tab} GitHub Actions
-
 We have written several actions to make it as easy as possible to upload from GitHub Actions
+
+### Use the `teahouse-hosting/upload` Action
+
+[`teahouse-hosting/upload`](#ref-gha-upload) is our legacy action: it's stable, will be supported forever, but is not receiving new features.
 
 A minimal (no build step) sample might look like:
 
@@ -58,13 +60,24 @@ jobs:
 
 ```
 
-Note that this only attempts a build on your main branch and does not handle forks. A more full-featured example can be found in [this site's own repo](https://github.com/teahouse-hosting/docs.teahouse.cafe/blob/trunk/.github/workflows/publish.yml). More details about how the action works can be found in the {ref}`reference docs <ref-gha>`
+Note that this only attempts a build on your main branch and does not handle forks. A more full-featured example can be found in [this site's own repo](https://github.com/teahouse-hosting/docs.teahouse.cafe/blob/trunk/.github/workflows/publish.yml). More details about how the action works can be found in the [reference docs](#ref-gha).
 
-:::
+### Use Swiss Army Upload
 
+[Swiss Army Upload](inv:sau#index) is our up-and-coming upload tool that's more flexible and offers more features. It is, however, under active development and beta quality.
 
-:::{tab} Other
+Compared to the above, the upload step becomes:
 
-At this time, we do not have authentication options for other CI/CD sytems. We are looking to add them in the future.
+```yaml
+    - name: Upload
+      uses: teahouse-hosting/swiss-army-upload@trunk
+      with:
+        src: .
+        dest: tea://${{ env.DOMAIN }}/
+```
+
+:::{seealso}
+
+* [SAU and Teahouse](inv:sau#backend-teahouse)
 
 :::

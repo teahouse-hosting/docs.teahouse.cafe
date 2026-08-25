@@ -18,6 +18,7 @@ extensions = [
     "sphinxext.opengraph",
     "sphinx_inline_tabs",
     "sphinx_copybutton",
+    "sphinx.ext.intersphinx",
 ]
 
 templates_path = ['_templates']
@@ -47,6 +48,10 @@ myst_enable_extensions = [
     # Produces a warning
     # "strikethrough",
 ]
+
+intersphinx_mapping = {
+    'sau': ('https://swiss-army-upload.teahouse.cafe/stable/', None),
+}
 
 
 # -- Options for HTML output -------------------------------------------------
