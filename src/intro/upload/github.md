@@ -1,11 +1,7 @@
-(with-git)=
+(with-github)=
 # ... GitHub
 
-If you're using Git and a static site generator (or want to use them), Teahouse supports uploading directly from CI/CD.
-
-Currently, we support these CI/CD providers:
-
-* GitHub Actions
+If you're using Git and a static site generator (or want to use them), Teahouse supports uploading directly from GitHub Actions.
 
 
 ## 1. Create & configure your site
@@ -30,10 +26,10 @@ name: Publish
 on:
   push:
     branches:
-      - trunk
+      - trunk # SUBSTITUTE
 
 env:
-  DOMAIN: example.teahouse.page
+  DOMAIN: example.teahouse.page # SUBSTITUTE
 
 permissions:
   id-token: write # This is required for requesting the JWT
@@ -64,7 +60,7 @@ Note that this only attempts a build on your main branch and does not handle for
 
 ### Use Swiss Army Upload
 
-[Swiss Army Upload](inv:sau#index) is our up-and-coming upload tool that's more flexible and offers more features. It is, however, under active development and beta quality.
+[Swiss Army Upload](inv:sau#index) is our up-and-coming upload tool that's more flexible and offers more features (such as uploading to subfolders). It is, however, under active development and beta quality.
 
 Compared to the above, the upload step becomes:
 
