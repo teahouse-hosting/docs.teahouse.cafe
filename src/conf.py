@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Teahouse'
+project = 'Teahouse Hosting'
 copyright = '2025, Teahouse Hosting'
 author = 'Teahouse Hosting'
 
@@ -56,6 +56,7 @@ html_theme = 'furo'
 html_static_path = ['_static']
 
 html_logo = "_static/logo.svg"
+html_title = "Teahouse Manual"
 
 html_theme_options = {
     "light_css_variables": {
