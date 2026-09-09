@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Teahouse'
+project = 'Teahouse Hosting'
 copyright = '2025, Teahouse Hosting'
 author = 'Teahouse Hosting'
 
@@ -18,6 +18,7 @@ extensions = [
     "sphinxext.opengraph",
     "sphinx_inline_tabs",
     "sphinx_copybutton",
+    "sphinx.ext.intersphinx",
 ]
 
 templates_path = ['_templates']
@@ -48,6 +49,10 @@ myst_enable_extensions = [
     # "strikethrough",
 ]
 
+intersphinx_mapping = {
+    'sau': ('https://swiss-army-upload.teahouse.cafe/stable/', None),
+}
+
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
@@ -56,6 +61,7 @@ html_theme = 'furo'
 html_static_path = ['_static']
 
 html_logo = "_static/logo.svg"
+html_title = "Teahouse Manual"
 
 html_theme_options = {
     "light_css_variables": {

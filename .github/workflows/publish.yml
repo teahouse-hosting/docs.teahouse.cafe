@@ -30,6 +30,18 @@ jobs:
           name: website
           path: ./build
 
+  linkcheck:
+    if: github.repository != 'teahouse-hosting/docs.teahouse.cafe' || github.ref != 'refs/heads/trunk'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - uses: ammaraskar/sphinx-action@8.2.3
+        with:
+          pre-build-command: pip install poetry && poetry install
+          build-command: poetry run sphinx-build -M linkcheck src build -W
+          docs-folder: "."
+
   # Deployment job
   deploy:
     if: github.repository == 'teahouse-hosting/docs.teahouse.cafe' && github.ref == 'refs/heads/trunk'

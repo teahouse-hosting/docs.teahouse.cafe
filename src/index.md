@@ -1,5 +1,5 @@
 
-# Teahouse documentation
+# Teahouse Manual
 
 
 ```{toctree}
